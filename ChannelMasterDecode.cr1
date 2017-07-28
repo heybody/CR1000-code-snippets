@@ -535,7 +535,7 @@ BeginProg
       MoveBytes(LongArray(i),3,Nums(1),0,1) 'Put byte in Least significant position
       'if first two bytes are not correct then throw out ensemble
       If i = 2 Then
-        If LongArray(1) <> 127 OR LongArray(2) <> 127 'check beginning of ensemble for Hex FF
+        If LongArray(1) <> 127 OR LongArray(2) <> 127 'check beginning of ensemble for Hex 7F
         BadEnsemble = BadEnsemble + 1
         HeaderMismatch = HeaderMismatch + 1
         SerialFlush(ADCPCom)
